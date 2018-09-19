@@ -6,6 +6,13 @@
 int i,j;
 int main_exit;
 void menu();
+void new_acc();
+void edit();
+void checkacc();
+void list();
+void transact();
+void erase();
+void close();
 
 struct date{
     int month,day,year;
@@ -41,6 +48,38 @@ void delay(int j)
 {   int i,k;
     for(i=0;i<j;i++)
          k=i;
+}
+
+
+void menu(void)
+{   int choice;
+    system("cls");
+    system("color B");
+    printf("\n\n\t\t BANK MGMT SYSTEM");
+    printf("\n\n\n\t\t\xB1\xB1\xB1 MAIN MENU \xB1\xB1\xB1");
+    printf("\n\n\t\t1. Create New Account\n\t\t2. Update Info of Existing Account\n\t\t3. Check the Details of Existing Account(s)\n\t\t4. View Customer List\n\t\t5. Transactions\n\t\t6. Remove Existing Account(s)\n\t\t7. Exit\n\n\n\t\t Enter Your Choice:");
+    scanf("%d",&choice);
+
+    system("cls");
+    switch(choice)
+    {
+        case 1:new_acc();
+        break;
+        case 2:edit();
+        break;
+        case 3:transact();
+        break;
+        case 4:see();
+        break;
+        case 5:erase();
+        break;
+        case 6:view_list();
+        break;
+        case 7:close();
+        break;
+
+    }
+
 }
 
 void new_acc()
@@ -104,6 +143,47 @@ void new_acc()
     system("cls");
     if (main_exit==1)
         menu();
-    else (main_exit==0)
+    else if (main_exit==0)
             close();
+    else
+    {
+    	printf("\nInvalid!\a");
+        goto add_invalid;
+    }
+}
+
+
+void edit()
+{
+	return 0;
+}
+
+void checkacc()
+{
+	return 0;
+}
+
+void list()
+{
+	return 0;
+}
+
+void transact()
+{
+	return 0;
+}
+
+void erase()
+{
+	return 0;
+}
+
+void close()
+{
+    printf("\n\n\n\n PATIENCE! WORK IN PROGRESS");
+}
+
+int main()
+{
+	return 0;
 }
